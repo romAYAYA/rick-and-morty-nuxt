@@ -23,8 +23,5 @@ export const useCharactersStore = defineStore('characters', {
         console.error('Error fetching characters:', error)
       }
     },
-    setCharacters(data) {
-      this.characters = data
-    },
   },
 })
