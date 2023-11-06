@@ -1,15 +1,7 @@
 <template>
-  <div v-for="character in characters.results" :key="character.id">
-    <p>name: {{ character.name }}</p>
-    <img :src="character.image" alt="" />
-    <p>name: {{ character.episode }}</p>
-  </div>
+  <h1 class="text-3xl font-bold underline">Hello world!</h1>
 </template>
 
-<script setup>
-const { data: characters } = await useFetch(
-  'https://rickandmortyapi.com/api/character'
-)
-</script>
+<script setup></script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
