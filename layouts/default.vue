@@ -1,7 +1,9 @@
 <template>
-  <div class="flex flex-col min-h-screen bg-[#101827]">
+  <div class="flex flex-col min-h-screen bg-[#000000]">
     <Header class="sticky top-0" />
-    <slot />
+    <div class="mx-12 my-8">
+      <slot />
+    </div>
     <Footer class="mt-auto" />
   </div>
 </template>

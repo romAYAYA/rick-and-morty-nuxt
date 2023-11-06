@@ -1,7 +1,18 @@
 <template>
-  <button @click="loadNextPage">next</button>
-  <button @click="loadPrevPage">prev</button>
-
+  <div class="inline-flex">
+    <button
+      class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l"
+      @click="loadPrevPage"
+    >
+      Prev
+    </button>
+    <button
+      @click="loadNextPage"
+      class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r"
+    >
+      Next
+    </button>
+  </div>
   <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
     <div v-for="character in characters.results" :key="character.id">
       <CharacterCard :character="character" />
@@ -32,4 +43,4 @@ async function loadPrevPage() {
 }
 </script>
 
-<style  scoped></style>
+<style scoped></style>

@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-  >
+  <div class="max-w-sm bg-[#4969AC] border border-[#4969AC]-700 rounded-lg">
     <img :src="character.image" alt="" class="w-full rounded-t-lg" />
     <div class="p-5">
       <nuxt-link to="">
