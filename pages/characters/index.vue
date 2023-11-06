@@ -2,15 +2,16 @@
   <button @click="loadNextPage">next</button>
   <button @click="loadPrevPage">prev</button>
 
-  <div class="grid grid-cols-4 gap-4">
+  <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
     <div v-for="character in characters.results" :key="character.id">
-      <p>name: {{ character.name }}</p>
-      <img :src="character.image" alt="" />
+      <CharacterCard :character="character" />
     </div>
   </div>
 </template>
 
 <script setup>
+import CharacterCard from '~/components/CharacterCard.vue'
+
 const store = useCharactersStore()
 const { fetchCharacters } = store
 const { characters } = storeToRefs(store)
@@ -31,4 +32,4 @@ async function loadPrevPage() {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style  scoped></style>

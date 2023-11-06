@@ -6,11 +6,6 @@ export const useCharactersStore = defineStore('characters', {
     page: 1,
   }),
 
-  getters: {
-    hasMorePages: (state) =>
-      computed(() => state.page < state.characters.info.pages),
-  },
-
   actions: {
     async fetchCharacters() {
       try {
