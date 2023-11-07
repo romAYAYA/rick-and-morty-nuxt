@@ -13,3 +13,8 @@
 </template>
 
 <script setup></script>
+<style scoped>
+nav {
+  z-index: 999;
+}
+</style>

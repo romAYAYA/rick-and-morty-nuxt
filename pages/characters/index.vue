@@ -21,8 +21,6 @@
 </template>
 
 <script setup>
-import CharacterCard from '~/components/CharacterCard.vue'
-
 const store = useCharactersStore()
 const { fetchCharacters } = store
 const { characters } = storeToRefs(store)
