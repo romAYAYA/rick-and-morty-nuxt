@@ -1,5 +1,4 @@
 <template>
-
   <div class="text-white py-20">
     <div
       class="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24"
