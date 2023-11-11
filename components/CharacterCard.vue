@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="card-wrapper max-w-sm bg-[#4969AC] border border-[#4969AC]-700 rounded-lg h-full relative overflow-hidden flex flex-col justify-between">
     <img

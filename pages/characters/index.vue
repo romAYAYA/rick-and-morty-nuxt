@@ -1,11 +1,12 @@
 <template>
-  <div class="mb-3 flex justify-between">
+  <div class="mb-3 flex justify-between items-center">
     <button
       class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l"
       @click="loadPrevPage"
     >
       Prev
     </button>
+    <div class="text-xl font-bold">Page {{ store.page }} of 42</div>
     <button
       @click="loadNextPage"
       class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r"
@@ -13,6 +14,7 @@
       Next
     </button>
   </div>
+
   <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
     <div v-for="character in characters.results" :key="character.id">
       <CharacterCard :character="character" />
