@@ -1,15 +1,19 @@
 <template>
-  <div>{{ currentCharacter }}</div>
+  <Head>
+    <Title>Wubba Lubba | {{ currentCharacter.name }}</Title>
+    <Meta name="name" :content="currentCharacter.name" />
+  </Head>
+
+  <CharacterDetails :currentCharacter="currentCharacter" />
 </template>
 
 <script setup>
 const store = useCharactersStore()
-const { id } = useRoute().params
 const { fetchCharacterById } = store
-
-await fetchCharacterById(id)
-
 const { currentCharacter } = toRefs(store)
+
+const { id } = useRoute().params
+await fetchCharacterById(id)
 </script>
 
 <style lang="scss" scoped></style>
