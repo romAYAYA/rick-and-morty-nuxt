@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col min-h-screen bg-[#050404]">
     <Header class="sticky top-0" />
-    <LoadingComponent v-if="isLoading" />
+    <LoadingComponent v-if="loading" />
     <div class="mx-12 my-8">
       <slot />
     </div>
@@ -11,16 +11,14 @@
 </template>
 
 <script setup>
-import LoadingComponent from '~/components/LoadingComponent.vue'
-
 const nuxtApp = useNuxtApp()
-const isLoading = ref(false)
+const loading = ref(false)
 
 nuxtApp.hook('page:start', () => {
-  isLoading.value = true
+  loading.value = true
 })
 
 nuxtApp.hook('page:finish', () => {
-  isLoading.value = false
+  loading.value = false
 })
 </script>

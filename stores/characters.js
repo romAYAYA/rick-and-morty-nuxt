@@ -4,6 +4,7 @@ export const useCharactersStore = defineStore('characters', {
   state: () => ({
     characters: [],
     page: 1,
+    currentCharacter: null,
   }),
 
   actions: {
@@ -16,6 +17,16 @@ export const useCharactersStore = defineStore('characters', {
         }
       } catch (error) {
         console.error('Error fetching characters:', error)
+      }
+    },
+
+    async fetchCharacterById(id) {
+      try {
+        const characterUrl = `https://rickandmortyapi.com/api/character/${id}`
+        const { data } = await useFetch(characterUrl, { key: id })
+        this.currentCharacter = data
+      } catch (error) {
+        console.error(`Error fetching character with id ${id}:`, error)
       }
     },
   },

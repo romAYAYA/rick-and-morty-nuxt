@@ -1,12 +1,15 @@
 <template>
-  <div></div>
+  <div>{{ currentCharacter }}</div>
 </template>
 
 <script setup>
 const store = useCharactersStore()
-const { fetchCharacters } = store
-const { characters } = storeToRefs(store)
-await fetchCharacters()
+const { id } = useRoute().params
+const { fetchCharacterById } = store
+
+await fetchCharacterById(id)
+
+const { currentCharacter } = toRefs(store)
 </script>
 
 <style lang="scss" scoped></style>
