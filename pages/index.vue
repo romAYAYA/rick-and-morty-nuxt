@@ -1,4 +1,11 @@
 <template>
+  <div class="scrolling-text-container">
+    <p
+      class="scrolling-text text-white text-3xl font-bold tracking-tight md:text-4xl xl:text-5xl"
+    >
+      Yeah, I'm DESIGNER
+    </p>
+  </div>
   <div class="text-white py-20">
     <div
       class="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24"
@@ -94,5 +101,23 @@
 <style scoped>
 .mirrored-image {
   transform: scaleX(-1);
+}
+
+.scrolling-text-container {
+  overflow: hidden;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  animation: scrollText 20s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 </style>

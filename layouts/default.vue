@@ -7,10 +7,7 @@
     >
       Loading...
     </div>
-    <marquee
-      class="text-white text-3xl font-bold tracking-tight md:text-4xl xl:text-5xl"
-      >Yeah, I'm DESIGNER</marquee
-    >
+
     <div class="mx-12 my-8">
       <slot />
     </div>
