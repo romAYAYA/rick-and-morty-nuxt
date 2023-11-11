@@ -2,6 +2,11 @@
   <div></div>
 </template>
 
-<script setup></script>
+<script setup>
+const store = useCharactersStore()
+const { fetchCharacters } = store
+const { characters } = storeToRefs(store)
+await fetchCharacters()
+</script>
 
 <style lang="scss" scoped></style>

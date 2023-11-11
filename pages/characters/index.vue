@@ -1,5 +1,5 @@
 <template>
-  <div class="inline-flex">
+  <div class="mb-3 flex justify-between">
     <button
       class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l"
       @click="loadPrevPage"
@@ -15,7 +15,7 @@
   </div>
   <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
     <div v-for="character in characters.results" :key="character.id">
-      <LazyCharacterCard :character="character" />
+      <CharacterCard :character="character" />
     </div>
   </div>
 </template>
